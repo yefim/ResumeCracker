@@ -1,10 +1,33 @@
 #dialog
-  p Bitches love syntax
+  p We use a really simple language, geared specifically towards resumes. With it, you have parent tags (like "job") and child tags (like "company"). You can have as many of each parent tag as you like! 
+  p Here's a full list of tags:
+  table(cellspacing = '15', border = '0')
+    tr
+      td 
+        strong Parent Tags
+      td 
+        strong Child Tags
+    tr
+      td info
+      td name, phone, email, address
+    tr
+      td job
+      td company, title, date, description
+    tr 
+      td school
+      td name, degree, date, description
+    tr
+      td project
+      td name, date, url, description
+    tr
+      td skills
+      td description
+
 #wrapper
   #header
     img(src = 'images/logo.jpg')
     button.green Download
-  p We use a <a href = "javascript:alert("hellp");$('#dialog').open();">super simple markup language</a> to help you generate a beautiful HTML resume.
+  p We use a <a href = "javascript:$('#dialog').dialog('open');">super simple markup language</a> to help you generate a beautiful HTML resume.
   #leftColumn.column
     #edit.textdiv(contenteditable="true")
     .subtext EDIT

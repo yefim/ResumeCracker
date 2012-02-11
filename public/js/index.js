@@ -32,13 +32,8 @@ $(document).ready(function () {
 		$('#preview').html($('#edit').html());
 		parser.parse();
 		
-		//dialog for syntax info
-		
-		$('#dialog').dialog({
-		  modal: true,
-		  autoOpen: false
-		
-		});
-		
 	});
+	
+	
+
 });

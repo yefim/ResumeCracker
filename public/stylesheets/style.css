@@ -78,6 +78,12 @@ div .subtext:hover {
 	/* cursor: default; */
 }
 
+#dialog p {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
 #rightColumn p { padding-left:10px; }
 #rightColumn .jobs { border-top:1px solid black; padding:5px; }
 #rightColumn .education { border-top:1px solid black; padding:5px; }
@@ -88,3 +94,5 @@ div .subtext:hover {
 #rightColumn .job .date {}
 #rightColumn .job .company {}
 #rightColumn .job .description {}
+
+

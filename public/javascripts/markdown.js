@@ -39,4 +39,13 @@ $(function(){
       }
     }
   });
+  
+  //dialog for syntax info
+	$('#dialog').dialog({
+		  modal: true,
+		  autoOpen: false,
+		  closeText: 'close',
+		  title: 'Sample Syntax',
+		  width: 550
+		});
 });
