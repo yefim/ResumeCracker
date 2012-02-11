@@ -1,7 +1,7 @@
 * {padding:0; margin:0;}
 
 body {
-  font: 20px Helevtica Neue, Helvetica, Arial, sans-serif;
+  font: 14px Helevtica Neue, Helvetica, Arial, sans-serif;
   font-weight: 100;
   height: 100%;
 }
@@ -48,7 +48,7 @@ div .column {
 	height: 600px;
 	margin-bottom: 70px;
 	border-radius: 7px;
-	overflow: scroll-y;
+	overflow-y: scroll;
 }
 div .textdiv {
 	padding: 50px;
@@ -87,15 +87,19 @@ p {
   font-weight: 300;
 }
 
-#rightColumn p { padding-left:10px; }
-#rightColumn .jobs { border-top:1px solid black; padding:5px; }
-#rightColumn .education { border-top:1px solid black; padding:5px; }
-#rightColumn .projects { border-top:1px solid black; padding:5px; }
-#rightColumn .skills { border-top:1px solid black; padding:5px; }
-#rightColumn .job {}
-#rightColumn .job .title {}
-#rightColumn .job .date {}
-#rightColumn .job .company {}
-#rightColumn .job .description {}
-
-
+#preview { max-width:800px; }
+#preview p { padding-left:10px; margin:0; font-weight:bold; }
+#preview .info { text-align:center; margin-bottom:10px; }
+#preview .info .name { font-size:175%; font-weight:bold; }
+#preview .info .phone { display:inline-block; }
+#preview .info .email { display:inline-block; padding-left:10px; }
+#preview .jobs, #preview .education, #preview .projects, #preview .skills { border-top:1px solid black; padding:10px; margin-bottom:10px; }
+#preview .job, #preview .school, #preview .project, #preview .skill { position:relative; margin-bottom:20px; }
+#preview .job:last-child, #preview .school:last-child, #preview .project:last-child, #preview .skill:last-child { margin-bottom:0px; }
+#preview .job .title, #preview .education .location { margin-bottom:10px; }
+#preview .job .date, #preview .education .date { position:absolute; right:0; top:0; }
+#preview .job .company, #preview .education .name { position:absolute; top:0; width:100%; text-align:center; font-weight:bold; }
+#preview .project .description { margin-top:10px; }
+#preview .project .name, #preview .project .url, #preview .project .date { display:inline-block; }
+#preview .project .date::before, #preview .project .url::before { content:"—"; padding:0 5px; }
+#preview .education .degree { margin:10px 0; }

@@ -6,9 +6,9 @@ $(function(){
 
   var symbols = [
     ['job',['title', 'company', 'date', 'description'], $jobs],
-    ['school',['name', 'degree', 'date', 'description'], $education],
+    ['school',['location', 'name', 'date', 'degree', 'description'], $education],
     ['project',['name','date','url','description'], $projects],
-    ['skills',['description'], $skills],
+    ['skill',['description'], $skills],
     ['info',['name', 'phone', 'email', 'address'], $info]
   ];
   $edit.keyup(function(){
@@ -27,11 +27,11 @@ $(function(){
       for(var j = 0; j < symbols.length; j++){
         if(symbols[j][0] === b[0].substr(0, b[0].length - 1)){
           var symbol = symbols[j], $container = symbol[2];
+          $container = $("<div class=\""+symbol[0]+"\"></div>").appendTo($container);
           for(var k = 0; k < symbol[1].length; k++){
-            $container = $("<div class=\""+symbol[0]+"\"></div>").appendTo($container);
             for(var l = 1; l < b.length; l++){
               if(symbol[1][k] === b[l].substr(0,symbol[1][k].length)){
-                $("<div class=\"" + symbol[0] + "\">" + b[l].substr(symbol[1][k].length + 1, b[l].length) + "</div>").appendTo($container);
+                $("<div class=\"" + symbol[1][k] + "\">" + b[l].substr(symbol[1][k].length + 1, b[l].length) + "</div>").appendTo($container);
               }
             }
           }
