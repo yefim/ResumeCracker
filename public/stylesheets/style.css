@@ -22,21 +22,41 @@ div#header {
 div#wrapper {
 	margin: 0px auto;
 }
-div .textdiv {
-	border: 1px dashed #ccc;
-	border-radius: 7px;
-	padding: 20px 20px;
-	width: 45%;
-	height: 750px;
-	margin-bottom: 70px;
-}
-div#edit {
+div#leftColumn {
 	float: left;
 	border: 2px dashed #ccc;
 	background-color: #fff;
 }
-div#preview {
+div#rightColumn {
 	float: right;
 	border: 2px solid #ccc;
 	background-color: #fefefe;
+}
+div .column {
+	height: 750px;
+	width: 45%;
+	margin-bottom: 70px;
+	border-radius: 7px;
+}
+div .textdiv {
+	height: 100%;
+	padding: 50px;
+}
+div#edit {
+	
+}
+div#preview {
+	
+}
+div .subtext {
+	text-align: center;
+	font-size: 50px;
+	opacity: 0.2;
+	width: 100%;
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+div .subtext:hover {
+	/* cursor: default; */
 }

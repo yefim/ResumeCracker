@@ -6,6 +6,10 @@ $(document).ready(function () {
 	$('#preview').click(function() {
 		$('#edit').focus();
 	});
+	$('div.subtext').click(function() {
+		$('#edit').focus();
+	});
+	
 	// prevents tabbing away, keycode = 9 = tab key	
 	$('#edit').keydown(function(event) {
 		var keyCode = event.keyCode || event.which; 
