@@ -1,3 +1,5 @@
+* {padding:0; margin:0;}
+
 body {
   font: 20px Helevtica Neue, Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -57,10 +59,9 @@ div#edit {
   font-family: monospace;
   height: 100%;
   overflow: auto;
-	
 }
 div#preview {
-	
+
 }
 div .subtext {
 	pointer-events: none;
@@ -76,3 +77,14 @@ div .subtext {
 div .subtext:hover {
 	/* cursor: default; */
 }
+
+#rightColumn p { padding-left:10px; }
+#rightColumn .jobs { border-top:1px solid black; padding:5px; }
+#rightColumn .education { border-top:1px solid black; padding:5px; }
+#rightColumn .projects { border-top:1px solid black; padding:5px; }
+#rightColumn .skills { border-top:1px solid black; padding:5px; }
+#rightColumn .job {}
+#rightColumn .job .title {}
+#rightColumn .job .date {}
+#rightColumn .job .company {}
+#rightColumn .job .description {}
