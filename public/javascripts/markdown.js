@@ -38,14 +38,23 @@ $(function(){
         }
       }
     }
+
+    for(var i = 0; i < symbols.length; i++){
+      if(symbols[i][2].children().length > 0){
+        symbols[i][2].parent().show();
+      }
+      else{
+        symbols[i][2].parent().hide();
+      }
+    }
   });
-  
+
   //dialog for syntax info
-	$('#dialog').dialog({
-		  modal: true,
-		  autoOpen: false,
-		  closeText: 'close',
-		  title: 'Sample Syntax',
-		  width: 550
-		});
+  $('#dialog').dialog({
+    modal: true,
+    autoOpen: false,
+    closeText: 'close',
+    title: 'Sample Syntax',
+    width: 550
+  });
 });
