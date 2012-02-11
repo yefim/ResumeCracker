@@ -2,6 +2,7 @@ body {
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #D6F5F8;
+  height: 100%;
 }
 
 a {
@@ -20,6 +21,7 @@ div#header {
 	margin-bottom: 12px;
 }
 div#wrapper {
+	height: 100%;
 	margin: 0px auto;
 }
 div#leftColumn {
@@ -33,14 +35,14 @@ div#rightColumn {
 	background-color: #fefefe;
 }
 div .column {
-	height: 750px;
 	width: 45%;
+	height: 100%;
 	margin-bottom: 70px;
 	border-radius: 7px;
 }
 div .textdiv {
-	height: 100%;
 	padding: 50px;
+	overflow: auto;
 }
 div#edit {
 	
@@ -49,6 +51,7 @@ div#preview {
 	
 }
 div .subtext {
+	pointer-events: none;
 	text-align: center;
 	font-size: 50px;
 	opacity: 0.2;
