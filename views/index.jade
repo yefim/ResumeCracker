@@ -1,9 +1,11 @@
 #wrapper
-	#header= title
-	#leftColumn.column
-		#edit.textdiv(contenteditable="true")
-		.subtext EDIT
-	#rightColumn.column
-		#preview.textdiv
-		.subtext PREVIEW
-	
+  #header
+    img(src = 'images/logo.jpg')
+    button.green Download
+  p We use a <a href = "#">super simple markup language</a> to help you generate a beautiful HTML resume.
+  #leftColumn.column
+    #edit.textdiv(contenteditable="true")
+    .subtext EDIT
+  #rightColumn.column
+    #preview.textdiv
+    .subtext PREVIEW
