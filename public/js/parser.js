@@ -1,11 +1,11 @@
-var keyList = ['job:', 'school:', 'project:', 'skills:','info:'];
+var keyList = ['job', 'school', 'project', 'skills','info'];
 
 var symbols = [];
-symbols['job:'] = ['company:', 'title:', 'date:', 'description:'];
-symbols['school:'] = ['name:', 'degree:', 'date:', 'description:'];
-symbols['project:'] = ['name:','date:','url:','description:'];
-symbols['skills'] = ['description:'];
-symbols['info:'] = ['name:', 'phone:', 'email:', 'address:'];
+symbols['job'] = ['company', 'title', 'date', 'description'];
+symbols['school'] = ['name', 'degree', 'date', 'description'];
+symbols['project'] = ['name','date','url','description'];
+symbols['skills'] = ['description'];
+symbols['info'] = ['name', 'phone', 'email', 'address'];
 
 var Parser = function(inp, out) {
 	this.input = $(inp);
@@ -21,11 +21,11 @@ Parser.prototype.parseKey = function(key, block) {
 	var output_block = "";
 	for (var i = 0; i < len; i++) {
 		var sym = symbols[key][i];
-		var index = block.indexOf(sym);
+		var index = block.indexOf(sym + ':');
 		if (index != -1) {
 			// take the string from the index + sym.length to the indexOf the next '</div>'
 			var until = block.indexOf('</div>', index);
-			var str = block.substring(index + sym.length, until);
+			var str = block.substring(index + sym.length, until).replace(':','');
 			output_block += "<div class='"+sym+"'>" + str + "</div>";
 		}
 	}
@@ -36,8 +36,8 @@ Parser.prototype.parseBlock = function(block) {
 	// then from 'dates:' to the next <div> and so on
 	for (var i = 0; i < keyList.length; i++) {
 		var key = keyList[i];
-		if (block.indexOf(key) != -1)
-			return "<div class='"+key+"'>" + this.parseKey(keyList[i], block) + '</div>';
+		if (block.indexOf(key + ':') != -1)
+			return "<div class='"+key+"'>" + this.parseKey(keyList[i], block).replace(':','') + '</div>';
 	}
 }
 Parser.prototype.parse = function() {
