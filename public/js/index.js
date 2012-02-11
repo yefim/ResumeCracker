@@ -1,6 +1,9 @@
 $(document).ready(function () {
 	var parser = new Parser($('#edit'), $('#preview'));
 	
+	// fixes the padding spillover
+	$('.textdiv').css('height', '-=100px');
+	
 	$('#edit').focus();
 	// redirect the focus to the edit textbox
 	$('#preview').click(function() {
