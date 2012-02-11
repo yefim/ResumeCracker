@@ -55,6 +55,8 @@ div .textdiv {
 div#edit {
   outline: none;
   font-family: monospace;
+  height: 100%;
+  overflow: auto;
 	
 }
 div#preview {
@@ -62,7 +64,7 @@ div#preview {
 }
 div .subtext {
 	pointer-events: none;
-	font-family: Helvetica Neue;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	text-align: center;
 	font-size: 75px;
 	opacity: 0.2;
