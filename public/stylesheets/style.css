@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #D6F5F8;
 }
 
@@ -32,11 +32,11 @@ div .textdiv {
 }
 div#edit {
 	float: left;
-	border: 1px dashed #ccc;
+	border: 2px dashed #ccc;
 	background-color: #fff;
 }
 div#preview {
 	float: right;
-	border: 1px solid #ccc;
+	border: 2px solid #ccc;
 	background-color: #fefefe;
 }
