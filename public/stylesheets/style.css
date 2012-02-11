@@ -30,7 +30,7 @@ div#header {
 }
 div#wrapper {
 	height: 100%;
-	margin: 0px auto;
+	margin: 20px auto;
 	width: 960px;
 }
 div#leftColumn {
@@ -78,10 +78,13 @@ div .subtext:hover {
 	/* cursor: default; */
 }
 
+p {
+  margin-bottom: 15px;
+}
+
 #dialog p {
   font-size: 16px;
   font-weight: 300;
-  margin-bottom: 10px;
 }
 
 #rightColumn p { padding-left:10px; }
